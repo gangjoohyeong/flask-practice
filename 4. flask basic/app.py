@@ -24,3 +24,11 @@ def times_5(data):
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port="8080")
+
+# 접속 테스트
+# http://127.0.0.1:8080/
+# http://127.0.0.1:8080/hello
+# http://127.0.0.1:8080/profile/1
+# http://127.0.0.1:8080/profile/123
+# http://127.0.0.1:8080/times_5/3
+# http://127.0.0.1:8080/times_5/20
