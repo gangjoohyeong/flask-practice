@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 다른 포트(?)로 넘겨주려면 action에 전체 주소 적어주기 -->
+    <form method="get" action="http://localhost:8080/login">
+        <center>
+            <h2>Login</h2>
+            ID: <input type="text" name="name"/><br>
+            PW: <input type="text" name="pw"/><br><br>
+            <input type="submit"/>
+        </center>
+    </form>
+</body>
+</html>
+
+<!-- app_request.py에서 8080 웹서버 실행하고,
+Live Server로 웹페이지 실행 후 submit해서 8080 웹서버로 넘겨주기
+ID가 joohyoeng일 때와 아닐 때 비교하기
+-->
