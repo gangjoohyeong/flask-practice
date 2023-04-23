@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if my_age >= 30 %}
+    <h2>내 나이 {{ my_age }}.. 늙고 병들었습니다.</h2>
+    {% elif my_age > 25 %}
+    <h2>내 나이 {{ my_age }}.. 아직 버틸만합니다</h2>
+    {% else %}
+    <h2>내 나이 {{ my_age }}, 건강합니다.</h2>
+    {% endif %}
+</body>
+</html>
