@@ -17,7 +17,7 @@ def test():
         print(user)
     if request.method == 'PUT':
         print('PUT')
-        user = request.args.get('emial')
+        user = request.args.get('email')
         print(user)
     if request.method == 'DELETE':
         print('DELETE')
