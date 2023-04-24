@@ -28,3 +28,9 @@ def test():
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port="8080")
+    
+    
+    
+# 접속 테스트
+# vue_restapi.html을 Liver server로 실행 후 button 클릭해서
+# console에서 interaction 확인
