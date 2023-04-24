@@ -1,0 +1,29 @@
+from flask import Flask, request, make_reponse, jsonify
+from flask_cors import CORS
+
+app = Flask(__name__)
+CORS(app)
+
+@app.route("/test", methods =['GET', 'POST', 'PUT', 'DELETE'])
+def test():
+    if request.method == 'POST':
+        print('POST')
+        data = request.get_json()
+        print(data)
+        print(data['email'])
+    if request.method == 'GET':
+        print('GET')
+        user = request.args.get('email')
+        print(user)
+    if request.method == 'PUT':
+        print('PUT')
+        user = request.args.get('emial')
+        print(user)
+    if request.method == 'DELETE':
+        print('DELETE')
+        user = request.args.get('email')
+        print(user)
+    return make_reponse(jsonify({'status' : True}), 200)
+
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port="8080")
