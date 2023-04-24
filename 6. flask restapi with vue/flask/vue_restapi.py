@@ -1,4 +1,4 @@
-from flask import Flask, request, make_reponse, jsonify
+from flask import Flask, request, make_response, jsonify
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -10,6 +10,7 @@ def test():
         print('POST')
         data = request.get_json()
         print(data)
+        # POST는 파라미터들도 다 들고 와서 사전처럼 꺼내서 사용
         print(data['email'])
     if request.method == 'GET':
         print('GET')
@@ -23,7 +24,7 @@ def test():
         print('DELETE')
         user = request.args.get('email')
         print(user)
-    return make_reponse(jsonify({'status' : True}), 200)
+    return make_response(jsonify({'status' : True}), 200)
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port="8080")
